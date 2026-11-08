@@ -1,8 +1,11 @@
-
 /* ========================================
    CEYDA PORTFOLIO - ANA TASARIM
    Koyu tema + lila vurgular
    ======================================== */
+
+/* ----------------------------------------
+   1. RENKLER VE TEMEL AYARLAR
+   ---------------------------------------- */
 
 :root {
     --bg-main: #0f0d17;
@@ -35,20 +38,6 @@ body {
     overflow-x: hidden;
 }
 
-/* GENEL SAYFA YERLEÞÝMÝ */
-
-.container {
-    width: calc(100% - 140px);
-    max-width: 1200px;
-    margin-left: 110px;
-    margin-right: auto;
-    padding: 32px 24px;
-}
-
-main {
-    min-height: calc(100vh - 100px);
-}
-
 h1,
 h2,
 h3,
@@ -67,7 +56,25 @@ a {
     transition: color 0.2s ease;
 }
 
-/* SOL MENÜ */
+/* ----------------------------------------
+   2. GENEL SAYFA YERLEÞÝMÝ
+   ---------------------------------------- */
+
+.container {
+    width: calc(100% - 140px);
+    max-width: 1200px;
+    margin-left: 110px;
+    margin-right: auto;
+    padding: 32px 24px;
+}
+
+main {
+    min-height: calc(100vh - 100px);
+}
+
+/* ----------------------------------------
+   3. SOL MENÜ VE LOGO
+   ---------------------------------------- */
 
 .side-menu {
     position: fixed;
@@ -100,10 +107,12 @@ a {
 }
 
     .logo-box img {
-        width: 58px;
+        width: 66px;
         max-width: 100%;
         height: auto;
-        border-radius: 0;
+        padding: 6px;
+        border-radius: 12px;
+        box-sizing: border-box;
     }
 
 .side-menu a {
@@ -132,13 +141,15 @@ a {
             transform: translateY(-2px);
         }
 
-/* ANA SAYFA - GÝRÝÞ ALANI */
+/* ----------------------------------------
+   4. ANA SAYFA - GÝRÝÞ ALANI (HERO)
+   ---------------------------------------- */
 
 .hero-section {
     min-height: calc(100vh - 100px);
     display: flex;
     align-items: center;
-    padding: 50px 12px;
+    padding: 50px 32px;
 }
 
 .hero-content {
@@ -182,8 +193,6 @@ a {
     font-size: 16px;
     line-height: 1.9;
 }
-
-/* ANA SAYFA BUTONLARI */
 
 .hero-buttons {
     display: flex;
@@ -230,8 +239,6 @@ a {
         transform: translateY(-2px);
     }
 
-/* TEKNOLOJÝ ETÝKETLERÝ */
-
 .hero-technologies > span {
     display: block;
     margin-bottom: 14px;
@@ -256,318 +263,56 @@ a {
         font-size: 13px;
     }
 
-/* SAYFA BAÞLIKLARI */
-
-.text-black {
-    color: var(--text-main) !important;
+/* HERO SAÐ TARAF (þimdilik kapalý, logo eklemek istersen yorumu aç)
+.hero-section {
+    gap: 40px;
 }
 
-.display-4 {
-    font-weight: 700;
-    letter-spacing: -1px;
+.hero-content {
+    width: auto;
+    flex: 1 1 55%;
 }
 
-.text-center > h3 {
-    color: #d7cbed;
+.hero-visual {
+    flex: 1 1 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* PROJE, EÐÝTÝM VE ÝLETÝÞÝM KARTLARI */
-
-.card {
-    height: 100%;
-    overflow: hidden;
-    background-color: var(--bg-card) !important;
-    color: var(--text-main);
-    border: 1px solid var(--border-color) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
-    transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
-}
-
-    .card:hover {
-        transform: translateY(-4px);
-        background-color: var(--bg-card-hover) !important;
-        border-color: #665184 !important;
-    }
-
-.card-body {
-    padding: 24px;
-}
-
-.card-title,
-.card .card-title {
-    color: var(--text-main) !important;
-    line-height: 1.5;
-}
-
-.card-text {
-    color: var(--text-muted) !important;
-    line-height: 1.8;
-}
-
-/* BOOTSTRAP RENK SINIFLARINI KOYU TEMAYA UYARLAMA */
-
-.bg-light,
-.bg-white {
-    background-color: var(--bg-card) !important;
-}
-
-.text-dark {
-    color: var(--text-main) !important;
-}
-
-.text-muted {
-    color: var(--text-muted) !important;
-}
-
-.text-info {
-    color: var(--accent) !important;
-}
-
-.border-primary,
-.border-info {
-    border-color: var(--border-color) !important;
-}
-
-/* BUTONLAR VE BAÐLANTILAR */
-
-.btn-outline-primary {
-    color: var(--accent);
-    border-color: #705a91;
-}
-
-    .btn-outline-primary:hover {
-        color: #171020;
-        background-color: var(--accent);
-        border-color: var(--accent);
-    }
-
-.btn:focus-visible,
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-    box-shadow: none;
-}
-
-/* ÝLETÝÞÝM SAYFASI */
-
-.card a {
-    overflow-wrap: anywhere;
-}
-
-.card .btn {
-    white-space: normal;
-}
-
-/* FORM ALANLARI */
-
-input,
-textarea,
-.form-control {
-    background-color: #171321;
-    color: var(--text-main);
-    border: 1px solid var(--border-color);
-    border-radius: 7px;
-}
-
-    input::placeholder,
-    textarea::placeholder,
-    .form-control::placeholder {
-        color: var(--text-soft);
-    }
-
-    input:focus,
-    textarea:focus,
-    .form-control:focus {
-        background-color: #171321;
-        color: var(--text-main);
-        border-color: var(--accent);
-        box-shadow: 0 0 0 0.2rem rgba(185, 154, 255, 0.15);
-    }
-
-/* ALT BÝLGÝ */
-
-footer,
-.footer {
-    position: relative;
+.hero-visual img {
     width: 100%;
-    padding: 18px 0;
-    background-color: var(--bg-main);
-    color: var(--text-soft) !important;
-    border-top: 1px solid var(--border-color) !important;
+    max-width: 480px;
+    height: auto;
+    filter: brightness(0) invert(1);
 }
 
-    footer .container {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-/* TABLET VE MOBÝL */
-
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 24px 20px;
-    }
-
-    .side-menu {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: 100%;
-        height: auto;
-        min-height: auto;
-        padding: 10px 14px;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        gap: 8px;
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .logo-box {
-        position: static;
-        width: auto;
-        margin: 0;
-        padding: 0;
-    }
-
-        .logo-box img {
-            width: 48px;
-        }
-
-    .side-menu a {
-        padding: 9px;
-    }
-
-        .side-menu a i {
-            font-size: 21px;
-        }
-
-    .hero-section {
-        min-height: auto;
-        padding: 55px 4px;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(34px, 8vw, 46px);
-    }
-
-    .hero-content h2 {
-        font-size: 21px;
-    }
-
-    .hero-description {
-        font-size: 14px;
-    }
-
-    .hero-buttons {
-        gap: 10px;
-        margin-bottom: 38px;
-    }
-
-    .btn-primary-custom,
-    .btn-secondary-custom {
-        padding: 12px 15px;
-        font-size: 13px;
-    }
-
-    .technology-list {
-        gap: 8px;
-    }
-
-        .technology-list span {
-            font-size: 12px;
-        }
-
-    .display-4 {
-        font-size: 2.2rem;
-    }
-
-    .card-body {
-        padding: 20px;
-    }
-
-    footer .container {
-        padding: 0 20px;
+@media (max-width: 992px) {
+    .hero-visual {
+        display: none;
     }
 }
+*/
 
-/* KÜÇÜK TELEFONLAR */
-
-@media (max-width: 400px) {
-    .container {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn-primary-custom,
-    .btn-secondary-custom {
-        width: 100%;
-    }
-
-    .side-menu {
-        gap: 4px;
-        padding: 9px 7px;
-    }
-
-    .logo-box img {
-        width: 40px;
-    }
-
-    .side-menu a {
-        padding: 7px;
-    }
-}
-
-/* LOGO GÖRÜNÜRLÜÐÜ */
-
-.logo-box img {
-    
-    border-radius: 12px;
-    padding: 6px;
-    box-sizing: border-box;
-}
-
-@media (min-width: 769px) {
-    .logo-box img {
-        width: 66px;
-    }
-}
-
-
-/* ========================================
-   ANA SAYFA BÖLÜMLERÝ
-   ======================================== */
+/* ----------------------------------------
+   5. ANA SAYFA BÖLÜMLERÝ
+   ---------------------------------------- */
 
 #hakkimda,
 #yetenekler,
 #projeler,
-#egitimler {
-    padding: 70px 32px;
-    margin: 30px 0;
+#egitimler,
+#iletisim {
+    padding: 40px 32px;
+    margin: 0;
     scroll-margin-top: 30px;
 }
 
     #hakkimda h2,
     #yetenekler h2,
     #projeler h2,
-    #egitimler h2 {
+    #egitimler h2,
+    #iletisim h2 {
         margin-bottom: 24px;
         font-size: clamp(26px, 3vw, 34px);
         font-weight: 700;
@@ -577,7 +322,8 @@ footer,
         #hakkimda h2::after,
         #yetenekler h2::after,
         #projeler h2::after,
-        #egitimler h2::after {
+        #egitimler h2::after,
+        #iletisim h2::after {
             content: "";
             display: block;
             width: 48px;
@@ -587,9 +333,8 @@ footer,
             background-color: var(--accent);
         }
 
-    /* HAKKIMDA */
-
-    #hakkimda p {
+    #hakkimda p,
+    #iletisim p {
         max-width: 720px;
         font-size: 16px;
         line-height: 1.9;
@@ -635,7 +380,7 @@ footer,
     padding: 26px;
     border: 1px solid var(--border-color);
     border-radius: 14px;
-    background: linear-gradient( 145deg, var(--bg-card), #15111f );
+    background: linear-gradient(145deg, var(--bg-card), #15111f);
     transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
 
@@ -656,6 +401,44 @@ footer,
         font-size: 14px;
         line-height: 1.8;
     }
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+    .project-tags span {
+        padding: 5px 11px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background-color: rgba(185, 154, 255, 0.08);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+    .project-links a {
+        color: var(--text-main);
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px solid var(--accent);
+        padding-bottom: 2px;
+        transition: color 0.2s ease;
+    }
+
+        .project-links a:hover {
+            color: var(--accent);
+        }
 
 /* EÐÝTÝM VE SERTÝFÝKALAR */
 
@@ -690,174 +473,12 @@ footer,
         line-height: 1.8;
     }
 
-/* TABLET VE TELEFON */
-
-@media (max-width: 768px) {
-    #hakkimda,
-    #yetenekler,
-    #projeler,
-    #egitimler {
-        padding: 45px 8px;
-        margin: 15px 0;
-    }
-
-    .project-list,
-    .education-list {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card,
-    .education-card {
-        padding: 22px;
-    }
-}
-
-/* ÝLETÝÞÝM */
-
-#iletisim {
-    padding: 70px 32px;
-    margin: 30px 0;
-    scroll-margin-top: 30px;
-}
-
-    #iletisim h2 {
-        margin-bottom: 24px;
-        font-size: clamp(26px, 3vw, 34px);
-        font-weight: 700;
-        letter-spacing: -0.5px;
-    }
-
-        #iletisim h2::after {
-            content: "";
-            display: block;
-            width: 48px;
-            height: 3px;
-            margin-top: 12px;
-            border-radius: 5px;
-            background-color: var(--accent);
-        }
-
-    #iletisim p {
-        max-width: 720px;
-        font-size: 16px;
-        line-height: 1.9;
-    }
-
-@media (max-width: 768px) {
-    #iletisim {
-        padding: 45px 8px;
-        margin: 15px 0;
-    }
-}
-
-/* PROJE ETÝKETLERÝ */
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 18px;
-}
-
-    .project-tags span {
-        padding: 5px 11px;
-        border: 1px solid var(--border-color);
-        border-radius: 6px;
-        background-color: rgba(185, 154, 255, 0.08);
-        color: var(--accent);
-        font-size: 12px;
-        font-weight: 500;
-    }
-
-/* BÖLÜM BOÞLUKLARI VE HÝZALAMA */
-
-#hakkimda,
-#yetenekler,
-#projeler,
-#egitimler,
-#iletisim {
-    padding: 40px 32px;
-    margin: 0;
-}
-
-.hero-section {
-    padding: 50px 32px;
-}
-
-@media (max-width: 768px) {
-    #hakkimda,
-    #yetenekler,
-    #projeler,
-    #egitimler,
-    #iletisim {
-        padding: 30px 8px;
-    }
-
-    .hero-section {
-        padding: 40px 8px;
-    }
-}
-/* BÖLÜM ALTI BAÐLANTI */
+/* BÖLÜM ALTI BAÐLANTI VE GERÝ DÖN */
 
 .section-link {
     margin-top: 28px;
     margin-bottom: 0;
 }
-
-/* HERO SAÐ TARAF
-.hero-section {
-    gap: 40px;
-}
-
-.hero-content {
-    width: auto;
-    flex: 1 1 55%;
-}
-
-.hero-visual {
-    flex: 1 1 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-    .hero-visual img {
-        width: 100%;
-        max-width: 480px;
-        height: auto;
-        filter: brightness(0) invert(1)
-    }
-
-@media (max-width: 992px) {
-    .hero-visual {
-        display: none;
-    }
-}
-*/
-/* PROJE BAÐLANTILARI */
-
-.project-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 18px;
-}
-
-    .project-links a {
-        color: var(--text-main);
-        font-size: 13px;
-        font-weight: 600;
-        text-decoration: none;
-        border-bottom: 1px solid var(--accent);
-        padding-bottom: 2px;
-        transition: color 0.2s ease;
-    }
-
-        .project-links a:hover {
-            color: var(--accent);
-        }
-
-/* GERÝ DÖN BAÐLANTISI */
 
 .back-link {
     display: inline-flex;
@@ -875,3 +496,214 @@ footer,
     }
 
 
+/* ----------------------------------------
+   7. ODAK, FORM ALANLARI, ALT BÝLGÝ
+   ---------------------------------------- */
+
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    box-shadow: none;
+}
+
+input,
+textarea,
+.form-control {
+    background-color: #171321;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+}
+
+    input::placeholder,
+    textarea::placeholder,
+    .form-control::placeholder {
+        color: var(--text-soft);
+    }
+
+    input:focus,
+    textarea:focus,
+    .form-control:focus {
+        background-color: #171321;
+        color: var(--text-main);
+        border-color: var(--accent);
+        box-shadow: 0 0 0 0.2rem rgba(185, 154, 255, 0.15);
+    }
+
+footer,
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 18px 0;
+    background-color: var(--bg-main);
+    color: var(--text-soft) !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+    footer .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+/* ----------------------------------------
+   8. TABLET VE MOBÝL (en altta kalmalý)
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 24px 20px;
+    }
+
+    .side-menu {
+        position: sticky;
+        top: 0;
+        left: auto;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 10px 14px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 8px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .logo-box {
+        position: static;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+        .logo-box img {
+            width: 48px;
+        }
+
+    .side-menu a {
+        padding: 9px;
+    }
+
+        .side-menu a i {
+            font-size: 21px;
+        }
+
+    .hero-section {
+        min-height: auto;
+        padding: 40px 8px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(34px, 8vw, 46px);
+    }
+
+    .hero-content h2 {
+        font-size: 21px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+        margin-bottom: 38px;
+    }
+
+    .btn-primary-custom,
+    .btn-secondary-custom {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    .technology-list {
+        gap: 8px;
+    }
+
+        .technology-list span {
+            font-size: 12px;
+        }
+
+    #hakkimda,
+    #yetenekler,
+    #projeler,
+    #egitimler,
+    #iletisim {
+        padding: 30px 8px;
+    }
+
+    .project-list,
+    .education-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card,
+    .education-card {
+        padding: 22px;
+    }
+
+    .display-4 {
+        font-size: 2.2rem;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    footer .container {
+        padding: 0 20px;
+    }
+    #hakkimda,
+    #yetenekler,
+    #projeler,
+    #egitimler,
+    #iletisim {
+        scroll-margin-top: 90px;
+    }
+}
+
+/* ----------------------------------------
+   9. KÜÇÜK TELEFONLAR (en altta kalmalý)
+   ---------------------------------------- */
+
+@media (max-width: 400px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary-custom,
+    .btn-secondary-custom {
+        width: 100%;
+    }
+
+    .side-menu {
+        gap: 4px;
+        padding: 9px 7px;
+    }
+
+    .logo-box img {
+        width: 40px;
+    }
+
+    .side-menu a {
+        padding: 7px;
+    }
+}

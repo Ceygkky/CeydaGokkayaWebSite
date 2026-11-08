@@ -1,56 +1,32 @@
 ﻿@page
 @model CeydaPortfolio.Pages.AboutModel
 @{
-    ViewData["Title"] = "Hakkımda";
+    ViewData["Title"] = "Eğitim ve Sertifikalarım";
 }
 
-<div class="text-center mt-5">
+<a href="/" class="back-link">
+    <i class="bi bi-arrow-left"></i>
+    Ana sayfaya dön
+</a>
 
-    <h1 class="display-4 text-black">Hakkımda</h1>
+<section id="egitimler">
+    <h2>Eğitim ve Sertifikalarım</h2>
 
-    <h3 class="mt-4">Eğitimlerim</h3>
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="card shadow-sm h-100 bg-white rounded-3 border-primary hover-shadow">
-                <div class="card-body p-4">
-              <h5 class=" card-title fw-bold">Udemy - C# Başlangıç ve İleri Düzey Eğitimi</h5>
-                </div>
+    <div class="education-list">
+
+        <article class="education-card">
+            <h3>Udemy - C# Başlangıç ve İleri Düzey Eğitimi</h3>
+            <div class="project-links">
+                <a href="/sertifikalar/CSharpSertifika.pdf" target="_blank" rel="noopener">C# sertifikamı gör</a>
             </div>
-        </div>
-   
+        </article>
 
-     <div class="col-md-6">
-         <div class="card shadow-sm h-100 bg-white rounded-3 border-primary hover-shadow">
-             <div class="card-body p-4">
-                 <h5 class="card-title fw-bold">Udemy - Algoritma Eğitimi</h5>
-                 </div>
-             </div>
-         </div>
-     </div>
-
-
-    <h3 class="mt-5 mb-3">Sertifikalarım</h3>
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="card shadow-sm h-100 bg-white rounded-3 border-info  hover-shadow">
-                <div class="card-body p-4">
-                  <a href="/sertifikalar/AlgoritmaSertifika.pdf" target="_blank" class="btn btn-outline-primary w-100">Algoritma Sertifikam</a>
-
-                </div>
+        <article class="education-card">
+            <h3>Udemy - Algoritma Eğitimi</h3>
+            <div class="project-links">
+                <a href="/sertifikalar/AlgoritmaSertifika.pdf" target="_blank" rel="noopener">Algoritma sertifikamı gör</a>
             </div>
-        </div>
-  
-        <div class="col-md-6">
-            <div class="card shadow-sm h-100 bg-white rounded-3 border-info hover-shadow">
-                <div class="card-body p-4">
-                    <a href="/sertifikalar/CSharpSertifika.pdf" target="_blank" class="btn btn-outline-primary w-100">C# Sertifikam</a>
-                </div>
-            </div>
-        </div>
-     </div>
+        </article>
 
- </div>
-
-
-
-    
+    </div>
+</section>
