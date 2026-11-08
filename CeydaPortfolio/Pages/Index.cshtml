@@ -1,17 +1,198 @@
 ﻿@page
 @model IndexModel
+
 @{
     ViewData["Title"] = "Ana Sayfa";
 }
-<div class="text-center main-content">
 
-   <!-- Ana başlık-->
-   <h1 class="display-4 text-black">Merhaba, ben Ceyda Gökkaya!</h1>
+<section class="hero-section">
+    <div class="hero-content">
 
-  <p class="lead mt-3">
-   Algoritma temeli olan ve yazılım geliştirmeyi seven biriyim.
-   C# eğitimimi tamamladım, web geliştirme konusunda kendimi geliştiriyorum.
-   HTML, CSS ve ASP.NET Core ile web projeleri üzerinde çalışıyorum.
-   Bu portföy sitesinde C#, web projelerimi, sertifikalarımı ve ileride ekleyeceğim çalışmalarımı bulabilirsiniz.
-  </p>
-  </div>
+        <span class="hero-label">
+            PORTFÖYÜME HOŞ GELDİN
+        </span>
+
+        <h1>
+            Merhaba, ben
+            <span class="highlight-text">Ceyda Gökkaya.</span>
+        </h1>
+
+        <h2>Yazılım geliştirici adayıyım.</h2>
+
+        <p class="hero-description">
+            C# ve ASP.NET Core ile web geliştirme alanında
+            kendimi geliştiriyorum. Öğreniyor, üretiyor ve
+            yeni projeler üzerinde çalışıyorum.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/Projects" class="btn-primary-custom">
+                Projelerimi keşfet
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
+            <a href="/About" class="btn-secondary-custom">
+                Eğitim ve sertifikalarım
+            </a>
+        </div>
+
+        <div class="hero-technologies">
+            <span>ÇALIŞTIĞIM TEKNOLOJİLER</span>
+            <div class="technology-list">
+                <span>C#</span>
+                <span>ASP.NET Core</span>
+                <span>HTML & CSS</span>
+            </div>
+        </div>
+
+    </div>
+    @*
+    <div class="hero-visual">
+        <img src="/img/ceyd_logo.png" alt="Ceyda Gökkaya logo">
+    </div>
+    *@
+    
+</section>
+
+   <section id="hakkimda">
+       <h2>Hakkımda</h2>
+       <p>
+
+        Problem çözmeyi ve yazılım geliştirmeyi seven bir geliştirici adayıyım.
+        Algoritma ve C# eğitimimi tamamladım, şu anda web geliştirme alanında kendimi geliştiriyor, 
+        yeni projeler üzerinde çalışıyorum.
+
+        Bu sitede projelerimi, sertifikalarımı ve zamanla ekleyeceğim yeni çalışmalarımı bulabilirsiniz. 
+        Web sitesi projeleriniz ve site düzenlemeleriniz için benimle iletişime geçebilirsiniz.
+       </p>
+   </section>
+
+  <section id="yetenekler"> 
+      <h2>Yetenekler</h2>
+
+      
+        <ul>
+            <li>C#</li>
+            <li>Algoritma Temelleri</li>
+            <li>ASP.NET Core</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+            <li>Git ve GitHub</li>
+            <li>Visual Studio</li>
+            <li>VS Code</li>
+            <li>Canva</li>
+        </ul>
+      
+
+  </section>
+
+<section id="projeler">
+    <h2>Projelerim</h2>
+
+    <div class="project-list">
+
+        <article class="project-card">
+            <h3>Şekersiz Tarifler Sitesi</h3>
+            <p>
+                Tarifleri keşfetmeye yönelik geliştirdiğim web projesi.
+            </p>
+            <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Ceygkky/Sekersiz-Tarifler" target="_blank" rel="noopener">GitHub'da gör</a>
+                <a href="https://ceygkky.github.io/Sekersiz-Tarifler/" target="_blank" rel="noopener">Siteyi gör</a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <h3>Ağaçlar Sitesi</h3>
+            <p>
+                Ağaçlarla ilgili içerikleri sunan web projem.
+            </p>
+            <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Ceygkky/turkiyenin-agaclari" target="_blank" rel="noopener">GitHub'da gör</a>
+                <a href="https://ceygkky.github.io/turkiyenin-agaclari/" target="_blank" rel="noopener">Siteyi gör</a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <h3>Kişisel Portföy Sitem</h3>
+            <p>
+                Yazılım çalışmalarımı ve projelerimi tanıtmak için
+                ASP.NET Core ile geliştirdiğim kişisel web sitesi.
+            </p>
+            <div class="project-tags">
+                <span>C#</span>
+                <span>ASP.NET Core</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Ceygkky/CeydaGokkayaWebSite" target="_blank" rel="noopener">GitHub'da gör</a>
+                <a href="https://www.ceydagokkaya.com/" target="_blank" rel="noopener">Siteyi gör</a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section id="egitimler">
+    <h2>Eğitim ve Sertifikalar</h2>
+
+    <div class="education-list">
+
+        <article class="education-card">
+            <h3>C# Başlangıç ve İleri Düzey</h3>
+            <p>
+                Udemy üzerinden aldığım C# eğitimlerini tamamladım
+                ve sertifikamı aldım.
+            </p>
+        </article>
+
+        <article class="education-card">
+            <h3>Algoritma Eğitimi</h3>
+            <p>
+                Udemy üzerinden algoritma eğitimini tamamladım
+                ve sertifikamı aldım.
+            </p>
+        </article>
+
+    </div>
+
+    <p class="section-link">
+        <a href="/About" class="btn-secondary-custom">
+            Tüm sertifikalarımı gör
+            <i class="bi bi-arrow-right"></i>
+        </a>
+    </p>
+</section>
+
+
+<section id="iletisim">
+    <h2>İletişim</h2>
+
+    <p>
+        Benimle projeler, web geliştirme ve iş birliği
+        fırsatları hakkında iletişime geçebilirsiniz.
+    </p>
+
+    <p>
+        <a href="mailto:cey.gokkaya0@gmail.com"
+           class="btn-secondary-custom">
+            <i class="bi bi-envelope"></i>
+            cey.gokkaya0@gmail.com
+        </a>
+    </p>
+
+   
+</section>
+
