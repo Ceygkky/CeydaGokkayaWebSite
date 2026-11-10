@@ -45,8 +45,8 @@ namespace CeydaPortfolio
                     || userAgent.Contains("crawl", StringComparison.OrdinalIgnoreCase)
                     || userAgent.Contains("spider", StringComparison.OrdinalIgnoreCase);
 
-                var isError = path.StartsWith("/Error", StringComparison.OrdinalIgnoreCase);
-
+                var isError = path.StartsWith("/Error", StringComparison.OrdinalIgnoreCase)
+    ||          path.StartsWith("/Admin", StringComparison.OrdinalIgnoreCase);    
                 if (isPage && !isBot && !isError)
                 {
                     var scopeFactory = context.RequestServices.GetRequiredService<IServiceScopeFactory>();

@@ -1,0 +1,52 @@
+﻿@page
+@model CeydaPortfolio.Pages.Admin.StatsModel
+@{
+    ViewData["Title"] = "İstatistikler";
+    var maxDaily = Math.Max(1, Model.Daily.Max(d => d.Count));
+    var maxPage = Math.Max(1, Model.TopPages.Any() ? Model.TopPages.Max(p => p.Count) : 1);
+}
+
+<a href="/" class="back-link">
+    <i class="bi bi-arrow-left"></i>
+    Ana sayfaya dön
+</a>
+
+<section class="stats-section">
+    <h2>Sayfa Görüntülenme İstatistikleri</h2>
+    <p>Botlar tam elenemediği için bunlar "ziyaretçi" değil, sayfa görüntülenme sayılarıdır.</p>
+
+    <div class="stats-cards">
+        <div class="project-card">
+            <h3>@Model.TotalViews</h3>
+            <p>Toplam görüntülenme</p>
+        </div>
+        <div class="project-card">
+            <h3>@Model.Last7Days</h3>
+            <p>Son 7 gün</p>
+        </div>
+        <div class="project-card">
+            <h3>@Model.Today</h3>
+            <p>Bugün</p>
+        </div>
+    </div>
+
+    <h3 class="stats-title">En çok görüntülenen sayfalar</h3>
+    @foreach (var p in Model.TopPages)
+    {
+        <div class="stats-row">
+            <span>@p.PageName</span>
+            <div class="stats-bar"><span style="width: @(p.Count * 100 / maxPage)%"></span></div>
+            <span>@p.Count</span>
+        </div>
+    }
+
+    <h3 class="stats-title">Son 14 gün</h3>
+    @foreach (var d in Model.Daily)
+    {
+        <div class="stats-row">
+            <span>@d.Day.ToString("dd.MM.yyyy")</span>
+            <div class="stats-bar"><span style="width: @(d.Count * 100 / maxDaily)%"></span></div>
+            <span>@d.Count</span>
+        </div>
+    }
+</section>
