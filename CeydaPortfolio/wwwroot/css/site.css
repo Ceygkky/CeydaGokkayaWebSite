@@ -707,3 +707,136 @@ footer,
         padding: 7px;
     }
 }
+
+/* ÝSTATÝSTÝK SAYFASI */
+
+.stats-section {
+    padding: 40px 32px;
+}
+
+    .stats-section h2 {
+        margin-bottom: 12px;
+        font-size: clamp(26px, 3vw, 34px);
+        font-weight: 700;
+    }
+
+.stats-title {
+    margin: 36px 0 16px;
+    font-size: 20px;
+}
+
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+    .stats-cards .project-card {
+        min-height: 0;
+        text-align: center;
+    }
+
+        .stats-cards .project-card h3 {
+            margin-bottom: 6px;
+            color: var(--accent);
+            font-size: 36px;
+        }
+
+.stats-row {
+    display: grid;
+    grid-template-columns: 150px 1fr 50px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.stats-bar {
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgba(185, 154, 255, 0.12);
+}
+
+    .stats-bar span {
+        display: block;
+        height: 100%;
+        border-radius: 5px;
+        background-color: var(--accent);
+    }
+/* ÝLETÝÞÝM FORMU */
+
+.contact-form {
+    max-width: 560px;
+    margin-top: 24px;
+}
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+    .form-field label {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--text-main);
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.field-error {
+    display: block;
+    margin-top: 6px;
+    color: #ff9a9a;
+    font-size: 13px;
+}
+
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-privacy {
+    margin: 4px 0 18px;
+    font-size: 13px;
+}
+
+button.btn-primary-custom {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.form-notice {
+    max-width: 560px;
+    margin: 20px 0;
+    padding: 14px 18px;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.form-success {
+    border: 1px solid #4f9d6e;+
+    background-color: rgba(79, 157, 110, 0.12);
+    color: #a8e0bd;
+}
+
+.form-error {
+    border: 1px solid #b45a5a;
+    background-color: rgba(180, 90, 90, 0.12);
+    color: #ffb4b4;
+}
+
+.form-alt a {
+    color: var(--accent);
+}
