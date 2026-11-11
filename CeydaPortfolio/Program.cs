@@ -19,6 +19,20 @@ namespace CeydaPortfolio
                     builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
+            // Uygulama açýlýrken eksik veritabaný tablolarýný oluþturur
+            using (var scope = app.Services.CreateScope())
+            {
+                var startupLogger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+                try
+                {
+                    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                    db.Database.Migrate();
+                }
+                catch (Exception ex)
+                {
+                    startupLogger.LogError(ex, "Veritabaný güncellenemedi, site veritabaný olmadan çalýþmaya devam edecek.");
+                }
+            }
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
