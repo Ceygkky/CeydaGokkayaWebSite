@@ -1,6 +1,7 @@
 using CeydaPortfolio.Data;
 using CeydaPortfolio.Models;
 using Microsoft.EntityFrameworkCore;
+using CeydaPortfolio.Services;
 
 namespace CeydaPortfolio
 {
@@ -17,6 +18,10 @@ namespace CeydaPortfolio
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            // E-posta bildirimi
+            builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Email"));
+            builder.Services.AddScoped<EmailNotifier>();
 
             var app = builder.Build();
             // Uygulama açýlýrken eksik veritabaný tablolarýný oluþturur
