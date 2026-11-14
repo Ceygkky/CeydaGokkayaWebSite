@@ -14,14 +14,15 @@ Bu proje sayesinde hem kendimi ve yeteneklerimi tanıtmayı hem de geliştirdiğ
 
 ## 🚀 Özellikler
 
-* 🎨 Modern ve sade tasarım
-* 📱 Responsive / mobil uyumlu yapı
-* 🧭 Kolay ve anlaşılır navigasyon
-* 💼 Kişisel portföy ve proje sunumu
-* 📂 Projeler hakkında bilgi
-* 📬 İletişim bölümü
-* 🌐 Kişisel web sitesi bağlantısı
-
+- 🎨 Koyu tema ve lila vurgulu, modern tasarım
+- 📱 Telefon, tablet ve bilgisayarda uyumlu (responsive) yapı
+- 🧭 Kolay ve anlaşılır navigasyon
+- 💼 Proje kartları: teknoloji etiketleri, GitHub ve canlı site bağlantıları
+- 🎓 Eğitim ve sertifikalar sayfası
+- 📬 İletişim formu: mesajlar SQL Server veritabanına kaydedilir, basit spam koruması ve saatlik mesaj sınırı vardır
+- 📊 Sayfa görüntülenme sayacı
+- 🌐 Canlıda yayında: ceydagokkaya.com
+  
 ---
 
 ## 🛠️ Kullanılan Teknolojiler
