@@ -31,13 +31,28 @@ Bu proje sayesinde hem kendimi ve yeteneklerimi tanıtmayı hem de geliştirdiğ
   <img src="https://skillicons.dev/icons?i=html,css,cs,dotnet,visualstudio" />
 </p>
 
-* **HTML5** — Sayfa yapısı
-* **CSS3** — Tasarım ve responsive düzen
-* **C#** — Uygulama geliştirme
-* **ASP.NET Core** — Web uygulaması altyapısı
-* **Visual Studio** — Geliştirme ortamı
-
+- **HTML5 ve CSS3** — Sayfa yapısı ve özel tasarım
+- **Bootstrap Icons** — Simgeler
+- **C#** — Uygulama geliştirme
+- **ASP.NET Core 9 (Razor Pages)** — Web uygulaması
+- **Entity Framework Core** — Veritabanı işlemleri ve migration
+- **SQL Server** — Veritabanı
+- **Git ve GitHub** — Sürüm kontrolü
+- **Visual Studio 2022** — Geliştirme ortamı
+- **Plesk / Güzel Hosting** — Yayınlama
 ---
+
+## ⚙️ Nasıl Çalıştırılır
+
+1. Depoyu klonla ve `CeydaPortfolio.sln` dosyasını Visual Studio 2022 ile aç.
+2. Yerel veritabanı bağlantısı (`LocalDB`) `appsettings.Development.json` içinde hazır.
+3. Uygulamayı çalıştır (`Ctrl + F5`). İlk açılışta gerekli tablolar migration ile kendiliğinden oluşur.
+
+## 🔒 Güvenlik Notu
+
+Canlı veritabanı bağlantı bilgisi ve şifreler GitHub'a gönderilmez, yalnızca sunucudaki ayrı bir ayar dosyasında durur. İletişim formunda bot tuzağı ve saatlik mesaj sınırı kullanılır.
+
+
 
 ## 📸 Proje
 
@@ -51,9 +66,7 @@ Web geliştirme alanındaki bilgilerimi geliştirmek, gerçek projeler üretmek 
 
 ## 🌱 Geliştirme Süreci
 
-Bu proje, web geliştirme alanında kendimi geliştirirken oluşturduğum çalışmalardan biridir.
-
-İlerleyen süreçte projeye yeni çalışmalar, tasarım geliştirmeleri ve farklı özellikler eklenebilir.
+Bu proje, web geliştirme alanında gelişmek ve öğrenirken üretmek için hazırlandı. Süreçte tasarım yenilendi, SQL Server veritabanı ve Entity Framework Core eklendi, site Windows hosting üzerinde yayına alındı. İlerleyen süreçte yeni çalışmalar ve özellikler eklenecek.
 
 ---
 
