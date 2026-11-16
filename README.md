@@ -19,7 +19,7 @@ Bu proje sayesinde hem kendimi ve yeteneklerimi tanıtmayı hem de geliştirdiğ
 - 🧭 Kolay ve anlaşılır navigasyon
 - 💼 Proje kartları: teknoloji etiketleri, GitHub ve canlı site bağlantıları
 - 🎓 Eğitim ve sertifikalar sayfası
-- 📬 İletişim formu: mesajlar SQL Server veritabanına kaydedilir, basit spam koruması ve saatlik mesaj sınırı vardır
+- 📬 İletişim formu: mesajlar SQL Server veritabanına kaydedilir, her yeni mesaj için bana e-posta bildirimi gelir; bot tuzağı ve saatlik mesaj sınırı vardır
 - 📊 Sayfa görüntülenme sayacı
 - 🌐 Canlıda yayında: ceydagokkaya.com
   
@@ -36,6 +36,7 @@ Bu proje sayesinde hem kendimi ve yeteneklerimi tanıtmayı hem de geliştirdiğ
 - **C#** — Uygulama geliştirme
 - **ASP.NET Core 9 (Razor Pages)** — Web uygulaması
 - **Entity Framework Core** — Veritabanı işlemleri ve migration
+- - **MailKit** — E-posta bildirimi gönderme
 - **SQL Server** — Veritabanı
 - **Git ve GitHub** — Sürüm kontrolü
 - **Visual Studio 2022** — Geliştirme ortamı
