@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using CeydaPortfolio.Data;
 using CeydaPortfolio.Models;
+using CeydaPortfolio.Services; // YENÝ
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -11,11 +12,13 @@ namespace CeydaPortfolio.Pages
     {
         private readonly ApplicationDbContext _db;
         private readonly ILogger<ContactModel> _logger;
+        private readonly EmailNotifier _notifier; // YENÝ
 
-        public ContactModel(ApplicationDbContext db, ILogger<ContactModel> logger)
+        public ContactModel(ApplicationDbContext db, ILogger<ContactModel> logger, EmailNotifier notifier) // YENÝ
         {
             _db = db;
             _logger = logger;
+            _notifier = notifier; // YENÝ
         }
 
         [BindProperty]
@@ -63,6 +66,8 @@ namespace CeydaPortfolio.Pages
                 return Page();
             }
 
+            ContactMessage contactMessage; // YENÝ
+
             try
             {
                 var email = Input.Email.Trim();
@@ -78,13 +83,14 @@ namespace CeydaPortfolio.Pages
                     return Page();
                 }
 
-                _db.ContactMessages.Add(new ContactMessage
+                contactMessage = new ContactMessage // YENÝ
                 {
                     Name = Input.Name.Trim(),
                     Email = email,
                     Message = Input.Message.Trim()
-                });
+                };
 
+                _db.ContactMessages.Add(contactMessage); // YENÝ
                 await _db.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -93,6 +99,8 @@ namespace CeydaPortfolio.Pages
                 ErrorMessage = "Mesajýnýz þu an gönderilemedi. Lütfen aþaðýdaki e-posta adresiyle ulaþýn.";
                 return Page();
             }
+
+            await _notifier.SendContactNotificationAsync(contactMessage); // YENÝ
 
             SuccessMessage = "Mesajýnýz alýndý, teþekkürler!";
             return RedirectToPage();
